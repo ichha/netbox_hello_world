@@ -1,14 +1,9 @@
-# hello_world/__init__.py
-from extras.plugins import PluginConfig
-
-__version__ = "0.1.0"
-
+from netbox.plugins import PluginConfig
 
 class HelloWorldConfig(PluginConfig):
     name = "hello_world"
     verbose_name = "Hello World"
     description = "A simple Hello World plugin for NetBox"
-    version = __version__
     author = "Your Name"
     author_email = "you@example.com"
     base_url = "hello-world"
@@ -16,6 +11,4 @@ class HelloWorldConfig(PluginConfig):
     required_settings = []
     default_settings = {}
 
-
-# This is REQUIRED — NetBox looks for this exact name
 config = HelloWorldConfig
