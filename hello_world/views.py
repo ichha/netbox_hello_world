@@ -1,29 +1,17 @@
+# hello_world/views.py
 from django.views.generic import TemplateView
-from netbox.plugins import PluginTemplateExtension
-
+from django.template.response import TemplateResponse
 
 class HelloView(TemplateView):
-    template_name = "hello_world/hello.html"
-
-
-# Optional: expose the view as a plugin template extension (not required for a page)
-class HelloWorldExtension(PluginTemplateExtension):
-    model = "dcim.device"
-
-    def right_page(self):
-        return """
-        <div class="panel panel-default">
-            <div class="panel-heading"><strong>Hello World</strong></div>
-            <div class="panel-body">
-                <a href="{% url 'plugins:hello_world:hello' %}" class="btn btn-primary">
-                    Go to Hello page
-                </a>
+    def get(self, request, *args, **kwargs):
+        html = """
+        {% extends "base.html" %}
+        {% block content %}
+            <div class="container mt-5">
+                <h1 class="text-success">Inline Success! 🎉</h1>
+                <p>View is routing. Templates next.</p>
+                <p>URL: {{ request.path }}</p>
             </div>
-        </div>
+        {% endblock %}
         """
-
-# Uncomment the line below if you want the extension to appear on device detail pages
-# template_extensions = [HelloWorldExtension]
-
-
-
+        return TemplateResponse(request, html)
