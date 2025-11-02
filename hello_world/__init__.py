@@ -1,4 +1,5 @@
 from netbox.plugins import PluginConfig
+import os
 
 __version__ = "0.1.0"
 
