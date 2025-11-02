@@ -14,5 +14,5 @@ class HelloWorldConfig(PluginConfig):
     required_settings = []
     default_settings = {}
 
-
+template_dir = os.path.join(os.path.dirname(__file__), "templates")
 config = HelloWorldConfig
