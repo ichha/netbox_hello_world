@@ -14,6 +14,8 @@ class HelloWorldConfig(PluginConfig):
     min_version = "4.0.0"
     required_settings = []
     default_settings = {}
-
-template_dir = os.path.join(os.path.dirname(__file__), "templates")
+def ready(self):
+        super().ready()
+        # Dynamic path for Git/pip/Docker
+        self.template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "templates"))
 config = HelloWorldConfig
