@@ -1,8 +1,4 @@
 from netbox.plugins import PluginConfig
-
-__version__ = "0.1.0"
-
-
 class HelloWorldConfig(PluginConfig):
     name = "hello_world"
     verbose_name = "Hello World"
