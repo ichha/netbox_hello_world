@@ -3,7 +3,7 @@ from netbox.plugins import PluginTemplateExtension
 
 
 class HelloView(TemplateView):
-    template_name = "templates/hello_world/hello.html"
+    template_name = "hello_world/hello.html"
 
 
 # Optional: expose the view as a plugin template extension (not required for a page)
@@ -24,5 +24,6 @@ class HelloWorldExtension(PluginTemplateExtension):
 
 # Uncomment the line below if you want the extension to appear on device detail pages
 # template_extensions = [HelloWorldExtension]
+
 
 
