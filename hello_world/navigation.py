@@ -1,4 +1,4 @@
-from netbox.plugins import PluginMenuItem
+from netbox.plugins import PluginMenuItem, PluginMenuButton
 from extras.choices import ButtonColorChoices
 
 menu_items = (
@@ -15,4 +15,5 @@ menu_items = (
         ),
     ),
 )
+
 
