@@ -1,14 +1,9 @@
 from netbox.plugins import PluginConfig
 
-class HelloWorldConfig(PluginConfig):
-    name = "hello_world"
-    verbose_name = "Hello World"
-    description = "A simple Hello World plugin for NetBox"
-    author = "Your Name"
-    author_email = "you@example.com"
-    base_url = "hello-world"
-    min_version = "4.0.0"
-    required_settings = []
-    default_settings = {}
+class NetBoxHelloConfig(PluginConfig):
+    name = "netbox_hello"
+    verbose_name = "NetBox Hello"
+    description = "A simple hello-world plugin for NetBox"
+    version = "0.1"
 
-config = HelloWorldConfig
+config = NetBoxHelloConfig
