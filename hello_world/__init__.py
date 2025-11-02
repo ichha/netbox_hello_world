@@ -14,6 +14,6 @@ class HelloWorldConfig(PluginConfig):
     required_settings = []
     default_settings = {}
 
+template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 
-# This is REQUIRED — NetBox looks for this exact name
 config = HelloWorldConfig
