@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from extras.plugins import PluginTemplateExtension
+from netbox.plugins import PluginTemplateExtension
 
 
 class HelloView(TemplateView):
@@ -24,3 +24,4 @@ class HelloWorldExtension(PluginTemplateExtension):
 
 # Uncomment the line below if you want the extension to appear on device detail pages
 # template_extensions = [HelloWorldExtension]
+
