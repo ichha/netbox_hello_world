@@ -1,10 +1,11 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
-    name="netbox-hello",
-    version="0.1.1",
-    description="NetBox Hello World plugin with navigation (for NetBox 4.4.4)",
+    name='netbox-hello',
+    version='0.1',
+    description='Simple demo plugin for NetBox',
+    author='Ichha Kr Thapa',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=[],
+    zip_safe=False,
 )
